@@ -9,8 +9,8 @@ export let options = {
   stages: [
     { duration: '10s', target: 100 }, // ramp to 100 RPS in 10s
     { duration: '20s', target: 100 }, // hold 100 RPS for 20s
-    // { duration: '30s', target: 1000 }, // ramp to 1000 RPS over 30s
-    // { duration: '8m', target: 1000 }, // hold 1000 RPS for 8m
+    { duration: '30s', target: 1000 }, // ramp to 1000 RPS over 30s
+    { duration: '8m', target: 1000 }, // hold 1000 RPS for 8m
     { duration: '30s', target: 100 }, // taper to 100 RPS over 30s
     { duration: '20s', target: 100 }, // hold 100 RPS for 20s
     { duration: '10s', target: 0 }, // taper to 0 over 10s
@@ -25,7 +25,7 @@ export default function() {
   } else {
     gameID = Math.floor(Math.random() * (7999999)) + 1
   }
-  http.get(`http://localhost:3000/games/${gameID}`, {
+  http.get(`http://localhost:3000/api/mediaData/${gameID}`, {
     tags: { name: 'k6Testing' }
   });
 
