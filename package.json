@@ -1,98 +1,31 @@
 {
-  "name": "purchase-options",
+  "name": "steamy-proxy",
   "version": "1.0.0",
-  "description": "Purchasing options component",
+  "description": "Proxy Server for Steamy app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
-    "build-dev": "webpack -d --watch",
-    "build": "webpack -d",
-    "seed": "node -e \"require('./server/database/seed/seed.js').seedDatabase()\"",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors"
+    "start": "node server/index.js",
+    "start:dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hrr47-FEC-Bailey/purchase-options.git"
+    "url": "git+https://github.com/SDC-Karev/ryan-proxy.git"
   },
-  "author": "Tristan Smith",
+  "author": "Ryan Zigler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hrr47-FEC-Bailey/purchase-options/issues"
+    "url": "https://github.com/SDC-Karev/ryan-proxy/issues"
   },
-  "homepage": "https://github.com/hrr47-FEC-Bailey/purchase-options#readme",
+  "homepage": "https://github.com/SDC-Karev/ryan-proxy#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "mysql": "^2.18.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "newrelic": "^6.13.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "babel-jest": "^26.3.0",
-    "babel-loader": "^8.1.0",
-    "chai": "^4.2.0",
-    "css-loader": "^4.2.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.3",
-    "eslint": "^7.6.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.5",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "jest": "^26.4.0",
-    "jest-css-modules": "^2.1.0",
-    "node-fetch": "^2.6.0",
-    "nodemon": "^2.0.4",
-    "react-test-renderer": "^16.13.1",
-    "style-loader": "^1.2.1",
-    "supertest": "^4.0.2",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ]
-  },
-  "jest": {
-    "clearMocks": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "coverageDirectory": "coverage",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/node_modules/jest-css-modules"
-    },
-    "setupFiles": [
-      "<rootDir>/enzyme.config.js"
-    ],
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)"
-    ],
-    "testPathIgnorePatterns": [
-      "\\\\node_modules\\\\",
-      "expectedResults.js"
-    ],
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "verbose": true
+    "cors": "^2.8.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "http-proxy-middleware": "^1.0.5",
+    "nodemon": "^2.0.4"
   }
 }
